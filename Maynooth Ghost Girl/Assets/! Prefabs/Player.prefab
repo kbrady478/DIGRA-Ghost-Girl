@@ -122,7 +122,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1011801666669933669}
   m_Father: {fileID: 1440064061091961446}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &8166890951345965352
@@ -241,6 +242,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player_Camera
   sensitivity: 5
+--- !u!1 &4422082257384207044
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1011801666669933669}
+  m_Layer: 0
+  m_Name: Item Hold Point
+  m_TagString: Hold Point
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1011801666669933669
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4422082257384207044}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7335018194656213167}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4512568697620419477
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,6 +283,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1440064061091961446}
   - component: {fileID: 9152552079174810385}
+  - component: {fileID: 2187303795193045631}
   - component: {fileID: 6440699348630533838}
   - component: {fileID: 3477586275091536352}
   m_Layer: 0
@@ -294,6 +327,20 @@ MonoBehaviour:
   move_Speed: 5
   jump_Force: 1
   gravity: -10
+--- !u!114 &2187303795193045631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4512568697620419477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58e3e11ac8054f829aa54a9cfebf662d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactor
+  interactor_Source: {fileID: 7335018194656213167}
+  interact_Range: 5
 --- !u!143 &6440699348630533838
 CharacterController:
   m_ObjectHideFlags: 0

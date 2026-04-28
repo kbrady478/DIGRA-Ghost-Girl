@@ -3,24 +3,25 @@ using UnityEngine;
 
 public class Player_Camera : MonoBehaviour
 {
+    private Interaction_Manager interaction_Manager;
     
     [Header("Camera Settings")]
     public float sensitivity = 5F;
     private float x_Rotation = 0f;
-    
-    [Header("Restrictions")]
-    public bool lock_Camera = false;
 
+    
+    
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        interaction_Manager = GameObject.FindWithTag("Interaction Manager").GetComponent<Interaction_Manager>();
     }
 
     
     private void Update()
     {
-        if (lock_Camera == true)
+        if (interaction_Manager.in_Dialogue == true)
             return;
         
         // Get directions

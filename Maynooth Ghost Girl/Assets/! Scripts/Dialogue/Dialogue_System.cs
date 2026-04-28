@@ -6,13 +6,14 @@ using UnityEngine;
 
 public class Dialogue_System : MonoBehaviour, IInteractable
 {
+    private Interaction_Manager interaction_Manager;
+    
     [Header("Dialogue Functionality")]
     [SerializeField] private Dialogue_Lines character_Script;
     [SerializeField] private string[] current_Dialogue;
     public int current_Dialogue_I = 0; // Dialogue ID
     private int current_Line_I = 0; // Individual line within Dialogue ID
     private bool currently_Typing = false; // For checking if dialogue is actively being written
-    private bool in_Dialogue = false;
     
     [Header("UI Functionality")]
     [SerializeField] private GameObject dialogue_Box; // To hide/unhide whole dialogue box
@@ -23,8 +24,13 @@ public class Dialogue_System : MonoBehaviour, IInteractable
     [Header("Restrict Player Controls")]
     [SerializeField] private Player_Movement player_Controls;
     [SerializeField] private Player_Camera player_Camera;
-    
-    
+
+
+    private void Start()
+    {
+        interaction_Manager = GameObject.FindWithTag("Interaction Manager").GetComponent<Interaction_Manager>();
+    }
+
 
     public void Start_Dialogue()
     {
@@ -82,7 +88,7 @@ public class Dialogue_System : MonoBehaviour, IInteractable
             if (current_Dialogue_I != 1)
                 current_Dialogue_I = 1;
             
-            in_Dialogue = false;
+            interaction_Manager.in_Dialogue = false;
             Toggle_Dialogue();
         }
             
@@ -98,20 +104,18 @@ public class Dialogue_System : MonoBehaviour, IInteractable
     {
         dialogue_Box.SetActive(!dialogue_Box.activeSelf);
         text_Component.text = "";
-        player_Controls.lock_Movement = in_Dialogue;
-        player_Camera.lock_Camera = in_Dialogue;
         current_Line_I = 0;
     }
 
 
     public void Interact()
     {
-        if (in_Dialogue == false)
+        if (interaction_Manager.in_Dialogue == false)
         {
-            in_Dialogue = true;
+            interaction_Manager.in_Dialogue = true;
             Start_Dialogue();
         }
-        else if (in_Dialogue == true)
+        else if (interaction_Manager.in_Dialogue == true)
         {
             Dialogue_Interacted();
         }
