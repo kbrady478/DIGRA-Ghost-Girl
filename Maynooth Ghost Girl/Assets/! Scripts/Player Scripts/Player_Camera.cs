@@ -7,7 +7,9 @@ public class Player_Camera : MonoBehaviour
     [Header("Camera Settings")]
     public float sensitivity = 5F;
     private float x_Rotation = 0f;
-
+    
+    [Header("Restrictions")]
+    public bool lock_Camera = false;
 
     private void Start()
     {
@@ -18,6 +20,9 @@ public class Player_Camera : MonoBehaviour
     
     private void Update()
     {
+        if (lock_Camera == true)
+            return;
+        
         // Get directions
         float mouse_X = Input.GetAxis("Mouse X") * sensitivity;
         float mouse_Y = Input.GetAxis("Mouse Y") * sensitivity;

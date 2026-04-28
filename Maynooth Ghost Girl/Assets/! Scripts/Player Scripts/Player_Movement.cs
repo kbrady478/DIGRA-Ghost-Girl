@@ -14,12 +14,18 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] private float jump_Force = 5f;
     [SerializeField] private float gravity = 10f;
     
-    
     private Vector3 velocity = Vector3.zero;
+    
+    
+    [Header("Restrictors")]
+    public bool lock_Movement = false;
     
     
     private void Update()
     {
+        if (lock_Movement == true)
+            return;
+        
         // Calculate directions
         Vector3 movement = transform.right * Input.GetAxis("Horizontal") + transform.forward * Input.GetAxis("Vertical");
         controller.Move(movement * move_Speed * Time.deltaTime);
