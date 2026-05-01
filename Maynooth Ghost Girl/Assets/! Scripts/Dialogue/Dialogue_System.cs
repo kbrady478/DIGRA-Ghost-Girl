@@ -4,14 +4,12 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Dialogue_System : MonoBehaviour, IInteractable
+public class Dialogue_System : MonoBehaviour
 {
     private Interaction_Manager interaction_Manager;
     
     [Header("Dialogue Functionality")]
-    [SerializeField] private Dialogue_Lines character_Script;
-    [SerializeField] private string[] current_Dialogue;
-    public int current_Dialogue_I = 0; // Dialogue ID
+    public string[] current_Dialogue;
     private int current_Line_I = 0; // Individual line within Dialogue ID
     private bool currently_Typing = false; // For checking if dialogue is actively being written
     
@@ -32,10 +30,10 @@ public class Dialogue_System : MonoBehaviour, IInteractable
     }
 
 
-    public void Start_Dialogue()
+    public void Start_Dialogue(string[] recieved_Dialogue)
     {
-        // Retrieve dialogue
-        current_Dialogue = character_Script.Get_Dialogue(current_Dialogue_I);
+        current_Dialogue = recieved_Dialogue;
+        
         if (current_Dialogue == null)
         {
             print("ERROR: Dialogue not found");
@@ -84,10 +82,6 @@ public class Dialogue_System : MonoBehaviour, IInteractable
         // If we are past the amount of total lines in the dialogue, end it
         else if (current_Line_I >= current_Dialogue.Length)
         {
-            // Set to reinteract line, even if there has been other dialogue
-            if (current_Dialogue_I != 1)
-                current_Dialogue_I = 1;
-            
             interaction_Manager.in_Dialogue = false;
             Toggle_Dialogue();
         }
@@ -105,20 +99,6 @@ public class Dialogue_System : MonoBehaviour, IInteractable
         dialogue_Box.SetActive(!dialogue_Box.activeSelf);
         text_Component.text = "";
         current_Line_I = 0;
-    }
-
-
-    public void Interact()
-    {
-        if (interaction_Manager.in_Dialogue == false)
-        {
-            interaction_Manager.in_Dialogue = true;
-            Start_Dialogue();
-        }
-        else if (interaction_Manager.in_Dialogue == true)
-        {
-            Dialogue_Interacted();
-        }
     }
     
 }// end script
