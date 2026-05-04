@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6019411310329839121, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.5406811
+      value: 3.0994325
       objectReference: {fileID: 0}
     - target: {fileID: 6019411310329839121, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.477
+      value: -0.037999988
       objectReference: {fileID: 0}
     - target: {fileID: 6019411310329839121, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.3434167
+      value: 1.0163016
       objectReference: {fileID: 0}
     - target: {fileID: 6019411310329839121, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
       propertyPath: m_LocalRotation.w
@@ -26,15 +26,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6019411310329839121, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6019411310329839121, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6019411310329839121, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6019411310329839121, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -82,6 +82,13 @@ MonoBehaviour:
   first_Dialogue:
   - Hello! I'm Student 1!
   - Help me!
-  reinteract_Dialogue:
-  - Im still Student 1!
+  correct_Item:
+  - Hey! Thats MIne!
+  wrong_Item:
+  - Tf is this
+  normal_Reinteract_Dialogue:
   - Please help me.
+  pleased_Reinteract_Dialogue:
+  - Thanks for helping!
+  pleased_Item_Held:
+  - My hands are full

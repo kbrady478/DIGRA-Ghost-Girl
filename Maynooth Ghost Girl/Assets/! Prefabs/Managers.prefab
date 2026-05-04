@@ -48,8 +48,6 @@ MonoBehaviour:
   dialogue_Box: {fileID: 0}
   text_Component: {fileID: 0}
   text_Speed: 0.05
-  player_Controls: {fileID: 0}
-  player_Camera: {fileID: 0}
 --- !u!1 &7217451646206794665
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,9 +93,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interaction_Manager
   dialogue_System: {fileID: 3454296232354128522}
-  player_Movement: {fileID: 0}
-  player_Camera: {fileID: 0}
   in_Dialogue: 0
+  fade_Animation: {fileID: 0}
+  holding_Item: 0
+  held_Item: {fileID: 0}
   gg_Dialogue_Lines: {fileID: 0}
   gg_First_Interaction: 1
   st1_Dialogue_Lines: {fileID: 0}

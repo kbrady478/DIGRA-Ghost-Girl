@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6019411310329839121, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.5402016
+      value: 1.0185499
       objectReference: {fileID: 0}
     - target: {fileID: 6019411310329839121, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.508
+      value: -0.0069999695
       objectReference: {fileID: 0}
     - target: {fileID: 6019411310329839121, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.6653342
+      value: 3.694384
       objectReference: {fileID: 0}
     - target: {fileID: 6019411310329839121, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
       propertyPath: m_LocalRotation.w
@@ -26,15 +26,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6019411310329839121, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6019411310329839121, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6019411310329839121, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6019411310329839121, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -82,5 +82,13 @@ MonoBehaviour:
   first_Dialogue:
   - Im Student 2!
   - I cant keep track of anything I own.
-  reinteract_Dialogue:
-  - Why do I lose everything dear to me?
+  correct_Item:
+  - Oh yeah that looks like my thing!
+  wrong_Item:
+  - That mightve been mine?
+  normal_Reinteract_Dialogue:
+  - Why do I keep doing this
+  pleased_Reinteract_Dialogue:
+  - I really hope I don't keep losing stuff...
+  pleased_Item_Held:
+  - Please dont give me more stuff to lose

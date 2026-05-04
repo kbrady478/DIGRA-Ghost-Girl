@@ -18,12 +18,8 @@ public class Dialogue_System : MonoBehaviour
     [SerializeField] private TextMeshProUGUI text_Component;
     [SerializeField] private float text_Speed;
     //[SerializeField] private AudioSource talking_Clip;
-
-    [Header("Restrict Player Controls")]
-    [SerializeField] private Player_Movement player_Controls;
-    [SerializeField] private Player_Camera player_Camera;
-
-
+    
+    
     private void Start()
     {
         interaction_Manager = GameObject.FindWithTag("Interaction Manager").GetComponent<Interaction_Manager>();
@@ -83,6 +79,7 @@ public class Dialogue_System : MonoBehaviour
         else if (current_Line_I >= current_Dialogue.Length)
         {
             interaction_Manager.in_Dialogue = false;
+            interaction_Manager.Check_For_End();
             Toggle_Dialogue();
         }
             
@@ -99,6 +96,7 @@ public class Dialogue_System : MonoBehaviour
         dialogue_Box.SetActive(!dialogue_Box.activeSelf);
         text_Component.text = "";
         current_Line_I = 0;
+        
     }
     
 }// end script
