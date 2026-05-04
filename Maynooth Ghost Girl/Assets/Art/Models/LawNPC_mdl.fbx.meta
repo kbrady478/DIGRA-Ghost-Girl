@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f41c14d78b1fb5e448094813b833de80
+guid: cabc8b1ddbd43934cb802db6866b6598
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -7,13 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: CSNPC_Face_mtl
-    second: {fileID: 2100000, guid: 4e23590203bf1f8479d3d84b45f6079d, type: 2}
+      name: LawNPC_Face_mtl
+    second: {fileID: 2100000, guid: 049ee3dc3c2afa749a90d7e155b3b536, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: CSNPC_mtl
-    second: {fileID: 2100000, guid: 9966d5dd90fe6834c9bff4d96b921bbd, type: 2}
+      name: LawNPC_mtl
+    second: {fileID: 2100000, guid: e554e2ec0e467f14aa42caa92d99dc4c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
