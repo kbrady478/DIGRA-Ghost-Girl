@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6019411310329839121, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.32733
+      value: 1.8860815
       objectReference: {fileID: 0}
     - target: {fileID: 6019411310329839121, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: -0.014999986
       objectReference: {fileID: 0}
     - target: {fileID: 6019411310329839121, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.21692
+      value: 7.576638
       objectReference: {fileID: 0}
     - target: {fileID: 6019411310329839121, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
       propertyPath: m_LocalRotation.w
@@ -26,15 +26,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6019411310329839121, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6019411310329839121, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6019411310329839121, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6019411310329839121, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -87,3 +87,7 @@ MonoBehaviour:
   reinteract_Dialogue:
   - Still a ghost, still a girl.
   - Everybody still hates me.
+  end_Dialogue:
+  - Finally free
+  given_Item:
+  - I cant hold that

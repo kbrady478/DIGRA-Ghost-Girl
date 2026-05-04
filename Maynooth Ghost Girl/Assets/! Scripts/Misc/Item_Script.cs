@@ -7,9 +7,10 @@ public class Item_Script : MonoBehaviour, IInteractable
     private Rigidbody rb;
     private Collider collider;
     
-    public bool being_Held;
+    private bool being_Held;
     private bool can_Interact = true;
-    private float interact_Cooldown = 0.1f;
+    private bool in_Dialogue = false;
+    private float interact_Cooldown = 0.05f;
     //private AudioSource audio_Source;
     
     void Start()
@@ -22,14 +23,20 @@ public class Item_Script : MonoBehaviour, IInteractable
         //audio_Source = GameObject.FindGameObjectWithTag("Pick_Up_Audio").GetComponent<AudioSource>();
     }// end Start()
 
-    void Update()
+    void FixedUpdate()
     {
         if (being_Held == false)
             return;
 
+        // Drop item
         // Cant be in Interact() since we turn off collider
-        if (Input.GetKeyDown(KeyCode.E) && interaction_Manager.in_Dialogue == false)
+        if (Input.GetKeyDown(KeyCode.E))
         {
+            // Stops dropping the item when entering dialogue
+            in_Dialogue = interaction_Manager.in_Dialogue;
+            if (in_Dialogue == true)
+                return;
+            
             // Stops problem of picking item back up as soon as it is dropped
             can_Interact = false;
             Invoke("Reset_Interact", interact_Cooldown);
@@ -37,6 +44,11 @@ public class Item_Script : MonoBehaviour, IInteractable
             being_Held = false;
             rb.isKinematic = false;
             collider.enabled = true;
+            interaction_Manager.holding_Item = false;
+            interaction_Manager.held_Item = null;
+            
+            //Invoke("Delay_Interact", interact_Cooldown);
+
         }
         
         
@@ -56,6 +68,8 @@ public class Item_Script : MonoBehaviour, IInteractable
             being_Held = true;
             rb.isKinematic = true;
             collider.enabled = false; // Turn off collider to avoid weird physics with player
+            interaction_Manager.holding_Item = true;
+            interaction_Manager.held_Item = this.gameObject;
         }
         
     }// end Interact()
@@ -64,5 +78,9 @@ public class Item_Script : MonoBehaviour, IInteractable
     {
         can_Interact = true;
     }// end Reset_Interact()
+
+
+    
+    
     
 }// end script

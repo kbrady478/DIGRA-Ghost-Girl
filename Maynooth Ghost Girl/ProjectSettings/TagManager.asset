@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Hold Point
   - Interaction Manager
+  - St1 Object
+  - St2 Object
+  - St3 Object
+  - Misc
   layers:
   - Default
   - TransparentFX

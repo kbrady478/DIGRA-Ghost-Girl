@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class St2_Dialogue_Lines : MonoBehaviour, IInteractable, IDialogue_Interaction
+public class St1_Dialogue_Lines : MonoBehaviour, IInteractable, IDialogue_Interaction
 {
     [Header("References")] 
     [SerializeField] private Interaction_Manager interaction_Manager;
@@ -10,7 +10,11 @@ public class St2_Dialogue_Lines : MonoBehaviour, IInteractable, IDialogue_Intera
     
     [Header("Dialogue Text - Elements are different lines")] // Different types of dialogue, arrays contain individual lines
     [SerializeField] private string[] first_Dialogue;
-    [SerializeField] private string[] reinteract_Dialogue;
+    [SerializeField] private string[] correct_Item;
+    [SerializeField] private string[] wrong_Item;
+    [SerializeField] private string[] normal_Reinteract_Dialogue;
+    [SerializeField] private string[] pleased_Reinteract_Dialogue;
+    [SerializeField] private string[] pleased_Item_Held;
 
     private string dialogue_To_Get;
     private string[] dialogue_To_Send;
@@ -32,10 +36,10 @@ public class St2_Dialogue_Lines : MonoBehaviour, IInteractable, IDialogue_Intera
     }
 
     // Used to start interaction in manager
-    // Check state in Interaction Manager, return here to match ID to string, send to Interaction Manager
+    // Check state in Interaction Manager, return here to match ID to string, send string to Interaction Manager
     public void Start_Interaction()
     {
-        dialogue_To_Get = interaction_Manager.St2_State();
+        dialogue_To_Get = interaction_Manager.St1_State();
         Get_Dialogue(dialogue_To_Get);
         interaction_Manager.Start_Interaction(dialogue_To_Send);
         interaction_Manager.in_Dialogue = true;
@@ -57,16 +61,30 @@ public class St2_Dialogue_Lines : MonoBehaviour, IInteractable, IDialogue_Intera
         switch (dialogue_ID)
         {
 
-            case "st2_First_Interaction":
+            case "st1_First_Interaction":
                 dialogue_To_Send = first_Dialogue;
                 break;
             
-
+            case "st1_Correct_Item":
+                dialogue_To_Send = correct_Item;
+                break;
             
-            case "st2_Reinteract":
-                dialogue_To_Send = reinteract_Dialogue;
+            case "st1_Wrong_Item":
+                dialogue_To_Send = wrong_Item;
+                break;
+            
+            case "st1_Normal_Reinteract":
+                dialogue_To_Send = normal_Reinteract_Dialogue;
                 break;
 
+            case "st1_Pleased_Reinteract":
+                dialogue_To_Send = pleased_Reinteract_Dialogue;
+                break;
+            
+            case "st1_Pleased_Item_Held":
+                dialogue_To_Send = pleased_Item_Held;
+                break;
+            
             default:
                 dialogue_To_Send = null;
                 print("ERROR: Dialogue ID has no match");
