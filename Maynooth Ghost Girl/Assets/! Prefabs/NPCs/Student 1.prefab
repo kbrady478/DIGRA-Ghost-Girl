@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1673086396780231838
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6019411310329839121, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.0994325
+      objectReference: {fileID: 0}
+    - target: {fileID: 6019411310329839121, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.037999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 6019411310329839121, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.0163016
+      objectReference: {fileID: 0}
+    - target: {fileID: 6019411310329839121, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6019411310329839121, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6019411310329839121, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6019411310329839121, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6019411310329839121, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6019411310329839121, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6019411310329839121, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8277734762357318183, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
+      propertyPath: m_Name
+      value: Student 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8277734762357318183, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 778264276671767484}
+  m_SourcePrefab: {fileID: 100100000, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
+--- !u!1 &7338497799323541177 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8277734762357318183, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
+  m_PrefabInstance: {fileID: 1673086396780231838}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &778264276671767484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7338497799323541177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daeaaedbc25b3beb2a6b022f747b9fdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::St1_Dialogue_Lines
+  interaction_Manager: {fileID: 0}
+  dialogue_System: {fileID: 0}
+  first_Dialogue:
+  - Hello! I'm Student 1!
+  - Help me!
+  correct_Item:
+  - Hey! Thats MIne!
+  wrong_Item:
+  - Tf is this
+  normal_Reinteract_Dialogue:
+  - Please help me.
+  pleased_Reinteract_Dialogue:
+  - Thanks for helping!
+  pleased_Item_Held:
+  - My hands are full
