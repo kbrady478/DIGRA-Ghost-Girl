@@ -8510,7 +8510,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1629142949
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11062,8 +11062,8 @@ MonoBehaviour:
   SFXAudio: {fileID: 0}
   musicVolumeSlider: {fileID: 0}
   sfxVolumeSlider: {fileID: 0}
-  pauseMenuParent: {fileID: 1629142948}
-  pauseMenu: {fileID: 28873690}
+  pauseMenuParent: {fileID: 0}
+  pauseMenu: {fileID: 0}
   settingsMenu: {fileID: 0}
   isGamePaused: 0
   mainMenu: MainMenu

@@ -21,7 +21,7 @@ public class SettingsController : MonoBehaviour
     public bool isGamePaused;
 
     [Header("Load Settings:")]
-    [SerializeField] private string mainMenu = "MainMenu";
+    [SerializeField] private string mainMenu = "Main Menu";
     [SerializeField] private string mainScene = "Beta_Scene";
     public string Url;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
