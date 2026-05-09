@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e80bfa10e3a2f694a983f5f04ff215e5
+guid: 6a32266d7a83a0d46a2e9d06b60fcf7b
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: standardSurface1
-    second: {fileID: 2100000, guid: f221a21a92f2f8b49ae7cd3b71e39416, type: 2}
+      name: Paintings_mtl
+    second: {fileID: 2100000, guid: f1e021de356547d458e600a8de6ed842, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -38,7 +38,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 20
+    globalScale: 50
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -96,7 +96,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 20
+    globalScale: 50
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
