@@ -241,6 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b316fd725ae3cd6c8186c51d81318ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player_Camera
+  pause_Menu: {fileID: 0}
   sensitivity: 5
 --- !u!1 &4422082257384207044
 GameObject:
@@ -325,6 +326,8 @@ MonoBehaviour:
   player_Camera: {fileID: 8166890951345965352}
   controller: {fileID: 6440699348630533838}
   move_Speed: 5
+  jump_Force: 0
+  gravity: -10
 --- !u!114 &2187303795193045631
 MonoBehaviour:
   m_ObjectHideFlags: 0
