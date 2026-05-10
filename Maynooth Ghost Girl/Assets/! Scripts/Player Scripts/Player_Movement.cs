@@ -11,6 +11,7 @@ public class Player_Movement : MonoBehaviour
     
     [Header("Settigns")] 
     [SerializeField] private float move_Speed = 5f;
+    [SerializeField] private float gravity = 10f;
     
     private Vector3 velocity = Vector3.zero;
     
@@ -28,6 +29,8 @@ public class Player_Movement : MonoBehaviour
         // Calculate directions
         Vector3 movement = transform.right * Input.GetAxis("Horizontal") + transform.forward * Input.GetAxis("Vertical");
         controller.Move(movement * move_Speed * Time.deltaTime);
+        
+        velocity.y += gravity * Time.deltaTime;
         
         // Apply movement
         controller.Move(velocity * Time.deltaTime);
