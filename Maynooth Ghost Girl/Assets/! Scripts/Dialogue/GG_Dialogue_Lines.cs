@@ -13,6 +13,7 @@ public class GG_Dialogue_Lines : MonoBehaviour, IInteractable, IDialogue_Interac
     [SerializeField] private string[] reinteract_Dialogue;
     [SerializeField] private string[] end_Dialogue;
     [SerializeField] private string[] given_Item;
+    [SerializeField] private string[] stew_Cheese_Interaction;
 
     private string dialogue_To_Get;
     private string[] dialogue_To_Send;
@@ -73,6 +74,10 @@ public class GG_Dialogue_Lines : MonoBehaviour, IInteractable, IDialogue_Interac
             
             case "gg_Reinteract":
                 dialogue_To_Send = reinteract_Dialogue;
+                break;
+            
+            case "gg_Stew_Cheese":
+                dialogue_To_Send = stew_Cheese_Interaction;
                 break;
 
             default:

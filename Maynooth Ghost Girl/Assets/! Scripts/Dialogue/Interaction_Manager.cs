@@ -3,6 +3,7 @@ using System.Collections;
 using System.ComponentModel;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 interface IDialogue_Interaction
@@ -29,26 +30,41 @@ public class Interaction_Manager : MonoBehaviour
     #region --- NPC Variables ---
     
     // True means it has to be played, false is either not played or has played
-    [Header("-- NPC Dialogue and Triggers --")]
+    [Header("-- NPC Stuff --")] 
+    [SerializeField] private float face_Anim_Timer;
     
-    [Header("Ghost Girl")] 
+    
+    [Header("- Ghost Girl -")] 
     [SerializeField] private GG_Dialogue_Lines gg_Dialogue_Lines;
+    [SerializeField] private Animator gg_Animator;
     public bool gg_First_Interaction = true;
     private bool gg_Final_Interaction = false;
     
-    [Header("Student 1")]
+    [SerializeField] private GameObject stew_Cheese;
+    private bool gg_Stew_Cheese_Interaction = false; // For spawning cheese after interaction
+    
+    [SerializeField] private Renderer gg_Face_Mat;
+    [SerializeField] private Texture gg_Default_Face;
+    [SerializeField] private Texture[] gg_Talking_Textures;
+    
+    
+    [Header("- Student 1 -")]
     [SerializeField] private St1_Dialogue_Lines st1_Dialogue_Lines;
+    [SerializeField] private Animator st1_Animator;
     public bool st1_Pleased = false;
     public bool st1_First_Interaction = true;
     
-    [Header("Student 2")]
+    
+    [Header("- Student 2 -")]
     [SerializeField] private St2_Dialogue_Lines st2_Dialogue_Lines;
+    [SerializeField] private Animator st2_Animator;
     public bool st2_Pleased = false;
     public bool st2_First_Interaction = true;
     
     
-    [Header("Student 3")]
+    [Header("- Student 3 -")]
     [SerializeField] private St3_Dialogue_Lines st3_Dialogue_Lines;
+    [SerializeField] private Animator st3_Animator;
     public bool st3_Pleased = false;
     public bool st3_First_Interaction = true;
     
@@ -74,18 +90,30 @@ public class Interaction_Manager : MonoBehaviour
 
     #region --- NPC States ---
     
-    // State machines for each character to determine what dialogue to get next
+    // State machines for each character to determine what dialogue to get next and trigger animations
     
     public string Ghost_Girl_State()
     {
+        gg_Animator.SetBool("isTalking", true);
+        StartCoroutine(GG_Facial_Interaction());
+        
+        
         if (gg_First_Interaction == true)
         {
             gg_First_Interaction = false;
             return "gg_First_Interaction";
         }
 
+        // Stew cheese interaction
+        if (st2_First_Interaction == false)
+        {
+            gg_Stew_Cheese_Interaction = true;
+            return "gg_Stew_Cheese";
+        }
+        
         if (st1_Pleased && st2_Pleased && st3_Pleased)
         {
+            gg_Animator.SetTrigger("Yippee_Trigger");
             gg_Final_Interaction = true;
             return "gg_End_Dialogue";
         }
@@ -103,6 +131,8 @@ public class Interaction_Manager : MonoBehaviour
 
     public string St1_State()
     {
+        st1_Animator.SetBool("isTalking", true);
+        
         // First time meeting
         if (st1_First_Interaction == true)
         {
@@ -121,6 +151,7 @@ public class Interaction_Manager : MonoBehaviour
             
             if (held_Item.tag == "St1 Object")
             {
+                st1_Animator.SetTrigger("Yippee_Trigger");
                 st1_Pleased = true;
                 Item_Given();
                 return "st1_Correct_Item";
@@ -147,6 +178,8 @@ public class Interaction_Manager : MonoBehaviour
     
     public string St2_State()
     {
+        st2_Animator.SetBool("isTalking", true);
+        
         if (st2_First_Interaction == true)
         {
             st2_First_Interaction = false;
@@ -164,6 +197,7 @@ public class Interaction_Manager : MonoBehaviour
             
             if (held_Item.tag == "St2 Object")
             {
+                st2_Animator.SetTrigger("Yippee_Trigger");
                 st2_Pleased = true;
                 Item_Given();
                 return "st2_Correct_Item";
@@ -190,6 +224,8 @@ public class Interaction_Manager : MonoBehaviour
     
     public string St3_State()
     {
+        st3_Animator.SetBool("isTalking", true);
+        
         if (st3_First_Interaction == true)
         {
             st3_First_Interaction = false;
@@ -207,6 +243,7 @@ public class Interaction_Manager : MonoBehaviour
             
             if (held_Item.tag == "St3 Object")
             {
+                st3_Animator.SetTrigger("Yippee_Trigger");
                 st3_Pleased = true;
                 Item_Given();
                 return "st3_Correct_Item";
@@ -233,6 +270,29 @@ public class Interaction_Manager : MonoBehaviour
     #endregion
 
 
+    private IEnumerator GG_Facial_Interaction()
+    {
+        int i = 0;
+        
+        while (in_Dialogue == true)
+        {
+            gg_Face_Mat.material.mainTexture = gg_Talking_Textures[i];
+            i++;
+
+            if (i > gg_Talking_Textures.Length - 1)
+                i = 0;
+
+            yield return new WaitForSeconds(face_Anim_Timer);
+        }
+        
+        GG_Face_Reset();
+    }
+
+    private void GG_Face_Reset()
+    {
+        gg_Face_Mat.material.mainTexture = gg_Default_Face;
+    }
+
     #region --- Other ---
     
     private void Item_Given()
@@ -243,13 +303,27 @@ public class Interaction_Manager : MonoBehaviour
         
     }
 
-    // To trigger end after final dialogue
-    public void Check_For_End()
+   
+    public void Post_Dialogue_Event()
     {
-        if (gg_Final_Interaction == false)
-            return;
+        Stop_Animations();
         
-        fade_Animation.Fade_Out();
+        if (gg_Final_Interaction == true)
+            fade_Animation.Fade_Out();
+
+        if (gg_Stew_Cheese_Interaction == true)
+        {
+            stew_Cheese.SetActive(true);
+            gg_Stew_Cheese_Interaction = false;
+        }
+    }
+
+    private void Stop_Animations()
+    {
+        gg_Animator.SetBool("isTalking", false);
+        st1_Animator.SetBool("isTalking", false);
+        st2_Animator.SetBool("isTalking", false);
+        st3_Animator.SetBool("isTalking", false);
     }
     
     #endregion
