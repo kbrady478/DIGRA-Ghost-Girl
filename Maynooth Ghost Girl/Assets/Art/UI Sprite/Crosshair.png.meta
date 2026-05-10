@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0befd9c5cb7853e4ab8b88f73f37acd7
+guid: 4d74abaaf4e6db24cab2e6562b5b57e0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MENU UI_3sprites_0
+      name: Untitled-1_0
       rect:
         serializedVersion: 2
-        x: 35
-        y: 892
-        width: 204
-        height: 155
+        x: 9
+        y: 40
+        width: 22
+        height: 19
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,20 +138,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20e56ffde7fb5664b81133126bc1d7c0
-      internalID: 1921565221
+      spriteID: 61deb0d70bc1aee4684dc067091b5de1
+      internalID: -1726305920
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MENU UI_3sprites_1
+      name: Untitled-1_1
       rect:
         serializedVersion: 2
-        x: 1463
-        y: 12
-        width: 434
-        height: 1050
+        x: 54
+        y: 29
+        width: 37
+        height: 42
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed21277a8627e9346b4131f1e9e71e4a
-      internalID: -685024002
+      spriteID: 4dc9780985285ad4c988a1e8ad37b06d
+      internalID: -1336353942
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MENU UI_3sprites_2
+      name: Untitled-1_2
       rect:
         serializedVersion: 2
-        x: 29
-        y: 488
-        width: 355
-        height: 351
+        x: 115
+        y: 28
+        width: 77
+        height: 51
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8045de36a5c241a47988e1244e3e098b
-      internalID: -174888419
+      spriteID: 4d0d652bc28e08e4084c6e3bbfd0e340
+      internalID: 857598803
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MENU UI_3sprites_5
+      name: Untitled-1_3
       rect:
         serializedVersion: 2
-        x: 75
-        y: 38
-        width: 1238
-        height: 408
+        x: 207
+        y: 25
+        width: 70
+        height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,8 +204,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff51ea6fae5922844a5347e0c779e674
-      internalID: -401485679
+      spriteID: 48805401621677f4eb9e7c7d37237d4c
+      internalID: 947251383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Untitled-1_4
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 15
+        width: 55
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ab720ec4a534f749bc8fa6ae84a7cc1
+      internalID: 561745260
       vertices: []
       indices: 
       edges: []
@@ -214,7 +236,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 0c5f5a682ba69ca448d06ae67e4a1c28
+    spriteID: 7d08b7fe85b9c724ab7e578b579f4769
     internalID: 0
     vertices: []
     indices: 
@@ -226,12 +248,11 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      MENU UI_3sprites_0: 1921565221
-      MENU UI_3sprites_1: -685024002
-      MENU UI_3sprites_2: -174888419
-      MENU UI_3sprites_3: -1609073139
-      MENU UI_3sprites_4: 1052272196
-      MENU UI_3sprites_5: -401485679
+      Untitled-1_0: -1726305920
+      Untitled-1_1: -1336353942
+      Untitled-1_2: 857598803
+      Untitled-1_3: 947251383
+      Untitled-1_4: 561745260
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
