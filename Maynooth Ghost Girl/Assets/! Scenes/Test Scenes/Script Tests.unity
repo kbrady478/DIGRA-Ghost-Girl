@@ -196,6 +196,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2f352135528673dc81320c6e4fb4d2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Fade_Animation
+--- !u!1 &836672880 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8697826873779675336, guid: 13099bb6a5ec81f18868e18ed8014d77, type: 3}
+  m_PrefabInstance: {fileID: 870728394}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &870728394
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -251,6 +256,10 @@ PrefabInstance:
     - target: {fileID: 8697826873779675336, guid: 13099bb6a5ec81f18868e18ed8014d77, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8697826873779675336, guid: 13099bb6a5ec81f18868e18ed8014d77, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1192,6 +1201,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 278407380}
     - target: {fileID: 2849254397303879948, guid: 4bd184c7942cac524b3a87b787b2fb66, type: 3}
+      propertyPath: stew_Cheese
+      value: 
+      objectReference: {fileID: 836672880}
+    - target: {fileID: 2849254397303879948, guid: 4bd184c7942cac524b3a87b787b2fb66, type: 3}
       propertyPath: fade_Animation
       value: 
       objectReference: {fileID: 550631386}
@@ -1291,6 +1304,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7217451646206794665, guid: 4bd184c7942cac524b3a87b787b2fb66, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8822131454785256913, guid: 4bd184c7942cac524b3a87b787b2fb66, type: 3}
       propertyPath: m_Name
       value: Managers
@@ -1368,6 +1385,18 @@ PrefabInstance:
       propertyPath: interaction_Manager
       value: 
       objectReference: {fileID: 1461333701}
+    - target: {fileID: 9175513822723201782, guid: 2cedd10a94ed5ef0d987562bfa4cca90, type: 3}
+      propertyPath: stew_Cheese_Interaction.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9175513822723201782, guid: 2cedd10a94ed5ef0d987562bfa4cca90, type: 3}
+      propertyPath: 'stew_Cheese_Interaction.Array.data[0]'
+      value: Lil bitch wants cheese?
+      objectReference: {fileID: 0}
+    - target: {fileID: 9175513822723201782, guid: 2cedd10a94ed5ef0d987562bfa4cca90, type: 3}
+      propertyPath: 'stew_Cheese_Interaction.Array.data[1]'
+      value: My goat
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

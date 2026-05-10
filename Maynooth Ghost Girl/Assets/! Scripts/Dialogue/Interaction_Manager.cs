@@ -38,7 +38,10 @@ public class Interaction_Manager : MonoBehaviour
     [SerializeField] private GG_Dialogue_Lines gg_Dialogue_Lines;
     public bool gg_First_Interaction = true;
     private bool gg_Final_Interaction = false;
-
+    
+    [SerializeField] private GameObject stew_Cheese;
+    private bool gg_Stew_Cheese_Interaction = false; // For spawning cheese after interaction
+    
     [SerializeField] private Renderer gg_Face_Mat;
     [SerializeField] private Texture gg_Default_Face;
     [SerializeField] private Texture[] gg_Talking_Textures;
@@ -48,6 +51,7 @@ public class Interaction_Manager : MonoBehaviour
     [SerializeField] private St1_Dialogue_Lines st1_Dialogue_Lines;
     public bool st1_Pleased = false;
     public bool st1_First_Interaction = true;
+    
     
     [Header("Student 2")]
     [SerializeField] private St2_Dialogue_Lines st2_Dialogue_Lines;
@@ -94,6 +98,13 @@ public class Interaction_Manager : MonoBehaviour
             return "gg_First_Interaction";
         }
 
+        // Stew cheese interaction
+        if (st2_First_Interaction == false)
+        {
+            gg_Stew_Cheese_Interaction = true;
+            return "gg_Stew_Cheese";
+        }
+        
         if (st1_Pleased && st2_Pleased && st3_Pleased)
         {
             gg_Final_Interaction = true;
@@ -276,13 +287,17 @@ public class Interaction_Manager : MonoBehaviour
         
     }
 
-    // To trigger end after final dialogue
-    public void Check_For_End()
+   
+    public void Post_Dialogue_Event()
     {
-        if (gg_Final_Interaction == false)
-            return;
-        
-        fade_Animation.Fade_Out();
+        if (gg_Final_Interaction == true)
+            fade_Animation.Fade_Out();
+
+        if (gg_Stew_Cheese_Interaction == true)
+        {
+            stew_Cheese.SetActive(true);
+            gg_Stew_Cheese_Interaction = false;
+        }
     }
     
     #endregion

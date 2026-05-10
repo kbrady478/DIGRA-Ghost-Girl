@@ -79,7 +79,7 @@ public class Dialogue_System : MonoBehaviour
         else if (current_Line_I >= current_Dialogue.Length)
         {
             interaction_Manager.in_Dialogue = false;
-            interaction_Manager.Check_For_End();
+            interaction_Manager.Post_Dialogue_Event();
             Toggle_Dialogue();
         }
             
