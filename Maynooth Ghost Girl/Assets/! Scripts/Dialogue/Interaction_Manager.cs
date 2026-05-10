@@ -40,9 +40,11 @@ public class Interaction_Manager : MonoBehaviour
     public bool gg_First_Interaction = true;
     private bool gg_Final_Interaction = false;
     
+    [Space(5)]
     [SerializeField] private GameObject stew_Cheese;
     private bool gg_Stew_Cheese_Interaction = false; // For spawning cheese after interaction
     
+    [Space(5)]
     [SerializeField] private Renderer gg_Face_Mat;
     [SerializeField] private Texture gg_Default_Face;
     [SerializeField] private Texture[] gg_Talking_Textures;

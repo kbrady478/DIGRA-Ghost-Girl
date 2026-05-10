@@ -10,12 +10,12 @@ public class SettingsController : MonoBehaviour
     [SerializeField] private AudioSource MusicAudio;
     [SerializeField] private AudioSource SFXAudio;
     [Space(10)]
+    
     [Header("Sliders:")]
     [SerializeField] private Slider musicVolumeSlider;
     [SerializeField] private Slider sfxVolumeSlider;
 
     [Header("Pause Menu:")]
-    [SerializeField] private GameObject pauseMenuParent;
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject settingsMenu;
     public bool isGamePaused;
@@ -55,7 +55,6 @@ public class SettingsController : MonoBehaviour
     }
     public void PauseGame()
     {
-        pauseMenuParent.SetActive(true);
         settingsMenu.gameObject.SetActive(false);
         pauseMenu.gameObject.SetActive(true);
         Time.timeScale = 0;
@@ -64,7 +63,6 @@ public class SettingsController : MonoBehaviour
     }
     public void ContinueGame()
     {
-        pauseMenuParent.SetActive(false);
         pauseMenu.gameObject.SetActive(false);
         Time.timeScale = 1;
         isGamePaused = false;
