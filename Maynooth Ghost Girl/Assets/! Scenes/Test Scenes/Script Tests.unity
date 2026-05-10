@@ -124,6 +124,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 99067664842461591, guid: df154ce9c88928132848d9268cca5ce9, type: 3}
   m_PrefabInstance: {fileID: 1288580416}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &192317758 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1065932359659484231, guid: 5070c2a4438bc1ad78cad8ad5e3a3f12, type: 3}
+  m_PrefabInstance: {fileID: 956148279694097562}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &307225884 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3454296232354128522, guid: 4bd184c7942cac524b3a87b787b2fb66, type: 3}
@@ -170,6 +175,11 @@ Transform:
   - {fileID: 155926708}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &545796857 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7520361380059961581, guid: 5070c2a4438bc1ad78cad8ad5e3a3f12, type: 3}
+  m_PrefabInstance: {fileID: 956148279694097562}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &550631386 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1588637774847045306, guid: 5070c2a4438bc1ad78cad8ad5e3a3f12, type: 3}
@@ -232,6 +242,10 @@ PrefabInstance:
     - target: {fileID: 8697826873779675336, guid: 13099bb6a5ec81f18868e18ed8014d77, type: 3}
       propertyPath: m_Name
       value: St2 Item
+      objectReference: {fileID: 0}
+    - target: {fileID: 8697826873779675336, guid: 13099bb6a5ec81f18868e18ed8014d77, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -310,6 +324,10 @@ PrefabInstance:
     - target: {fileID: 8697826873779675336, guid: 35e94df9437fe0d08a0f2395a8868d3f, type: 3}
       propertyPath: m_Name
       value: Item Base
+      objectReference: {fileID: 0}
+    - target: {fileID: 8697826873779675336, guid: 35e94df9437fe0d08a0f2395a8868d3f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -548,6 +566,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: St3 Item
       objectReference: {fileID: 0}
+    - target: {fileID: 8697826873779675336, guid: df154ce9c88928132848d9268cca5ce9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -696,6 +718,11 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1 &1657233485 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4421673782175669153, guid: 5070c2a4438bc1ad78cad8ad5e3a3f12, type: 3}
+  m_PrefabInstance: {fileID: 956148279694097562}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1855963324 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9175513822723201782, guid: 2cedd10a94ed5ef0d987562bfa4cca90, type: 3}
@@ -758,6 +785,10 @@ PrefabInstance:
     - target: {fileID: 8697826873779675336, guid: 5774b01341757d644a49ed0854a5c315, type: 3}
       propertyPath: m_Name
       value: St1 Item
+      objectReference: {fileID: 0}
+    - target: {fileID: 8697826873779675336, guid: 5774b01341757d644a49ed0854a5c315, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -870,6 +901,26 @@ PrefabInstance:
     - target: {fileID: 1440064061091961446, guid: 6a722e220bc210915820e0196bd04de8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2187303795193045631, guid: 6a722e220bc210915820e0196bd04de8, type: 3}
+      propertyPath: npc_Crosshair
+      value: 
+      objectReference: {fileID: 192317758}
+    - target: {fileID: 2187303795193045631, guid: 6a722e220bc210915820e0196bd04de8, type: 3}
+      propertyPath: interact_Range
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2187303795193045631, guid: 6a722e220bc210915820e0196bd04de8, type: 3}
+      propertyPath: item_Crosshair
+      value: 
+      objectReference: {fileID: 545796857}
+    - target: {fileID: 2187303795193045631, guid: 6a722e220bc210915820e0196bd04de8, type: 3}
+      propertyPath: default_Crosshair
+      value: 
+      objectReference: {fileID: 1657233485}
+    - target: {fileID: 2187303795193045631, guid: 6a722e220bc210915820e0196bd04de8, type: 3}
+      propertyPath: interactable_Layers.m_Bits
+      value: 192
       objectReference: {fileID: 0}
     - target: {fileID: 4512568697620419477, guid: 6a722e220bc210915820e0196bd04de8, type: 3}
       propertyPath: m_Name
@@ -985,9 +1036,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1225797136}
     m_Modifications:
+    - target: {fileID: 2344976952081859885, guid: ecae361f1f2c24f52883852105b7fb3b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5029479355177051402, guid: ecae361f1f2c24f52883852105b7fb3b, type: 3}
       propertyPath: m_Name
       value: Student 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5029479355177051402, guid: ecae361f1f2c24f52883852105b7fb3b, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7252230859613632828, guid: ecae361f1f2c24f52883852105b7fb3b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1028,6 +1087,10 @@ PrefabInstance:
     - target: {fileID: 7252230859613632828, guid: ecae361f1f2c24f52883852105b7fb3b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8679208216057812651, guid: ecae361f1f2c24f52883852105b7fb3b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9131384587796470670, guid: ecae361f1f2c24f52883852105b7fb3b, type: 3}
       propertyPath: dialogue_System
@@ -1101,6 +1164,10 @@ PrefabInstance:
     - target: {fileID: 7338497799323541177, guid: 0e5d5b77d05de284994861366ca33e2f, type: 3}
       propertyPath: m_Name
       value: Student 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7338497799323541177, guid: 0e5d5b77d05de284994861366ca33e2f, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1244,6 +1311,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ghost Girl
       objectReference: {fileID: 0}
+    - target: {fileID: 4154180569889830641, guid: 2cedd10a94ed5ef0d987562bfa4cca90, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6692870186467366614, guid: 2cedd10a94ed5ef0d987562bfa4cca90, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9175513822723201782, guid: 2cedd10a94ed5ef0d987562bfa4cca90, type: 3}
       propertyPath: dialogue_System
       value: 
@@ -1309,6 +1384,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Student 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3356406697519819318, guid: 29870e55c034c1549bc88aaa7a0c602b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3450196841581608418, guid: 29870e55c034c1549bc88aaa7a0c602b, type: 3}
       propertyPath: dialogue_System
       value: 
@@ -1317,6 +1396,10 @@ PrefabInstance:
       propertyPath: interaction_Manager
       value: 
       objectReference: {fileID: 1461333701}
+    - target: {fileID: 5463744673749486097, guid: 29870e55c034c1549bc88aaa7a0c602b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
