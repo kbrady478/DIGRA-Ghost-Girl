@@ -119,9 +119,9 @@ Material:
     - _OutlineWidth: 0
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
-    - _ScaleRatioA: 1
-    - _ScaleRatioB: 1
-    - _ScaleRatioC: 1
+    - _ScaleRatioA: 0.8333333
+    - _ScaleRatioB: 0.6770833
+    - _ScaleRatioC: 0.6770833
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
@@ -177,8 +177,8 @@ MonoBehaviour:
     m_UnitsPerEM: 2048
     m_LineHeight: 119.70703
     m_AscentLine: 96.81152
-    m_CapLine: 0
-    m_MeanLine: 0
+    m_CapLine: 51.609375
+    m_MeanLine: 51.609375
     m_Baseline: 0
     m_DescentLine: -22.895508
     m_SuperscriptOffset: 96.81152
@@ -187,7 +187,7 @@ MonoBehaviour:
     m_SubscriptSize: 0.5
     m_UnderlineOffset: -10.415039
     m_UnderlineThickness: 5.229492
-    m_StrikethroughOffset: 0
+    m_StrikethroughOffset: 20.64375
     m_StrikethroughThickness: 5.229492
     m_TabWidth: 23
   m_Material: {fileID: -3481043164848511185}
