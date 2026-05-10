@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 52374ffc70720d143b3429642ff911c7
+guid: 81b5c4e8a089ecc41af655dc7f237281
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Plant_mtl
-    second: {fileID: 2100000, guid: 34d79c64c4ec13b4ead31d2594a3c2d1, type: 2}
+      name: openPBR_shader1
+    second: {fileID: 2100000, guid: 25cbbebea7175a84faa1a2e7e673fba3, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
