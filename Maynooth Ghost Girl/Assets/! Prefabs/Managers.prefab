@@ -354,7 +354,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2834586165779215996}
   - component: {fileID: 3744857328657416370}
-  - component: {fileID: 3613314126237065708}
   m_Layer: 0
   m_Name: UI Manager
   m_TagString: Untagged
@@ -378,22 +377,6 @@ Transform:
   m_Father: {fileID: 3609479668254109336}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3744857328657416370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8626144881835763416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8d9298eb4abf2d14bae96e4ae2f5f84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Pause_Menu
-  pause_Menu: {fileID: 0}
-  cursor_Objects: {fileID: 0}
-  counter_Object: {fileID: 0}
-  is_Paused: 0
---- !u!114 &3613314126237065708
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
