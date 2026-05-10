@@ -107,7 +107,7 @@ public class Interaction_Manager : MonoBehaviour
         }
 
         // Stew cheese interaction
-        if (st2_First_Interaction == false)
+        if (st2_First_Interaction == false && stew_Cheese == false)
         {
             gg_Stew_Cheese_Interaction = true;
             return "gg_Stew_Cheese";
