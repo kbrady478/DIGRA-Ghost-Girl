@@ -79,7 +79,7 @@ public class Dialogue_System : MonoBehaviour
         else if (current_Line_I >= current_Dialogue.Length)
         {
             interaction_Manager.in_Dialogue = false;
-            interaction_Manager.Check_For_End();
+            interaction_Manager.Post_Dialogue_Event();
             Toggle_Dialogue();
         }
             
@@ -96,7 +96,6 @@ public class Dialogue_System : MonoBehaviour
         dialogue_Box.SetActive(!dialogue_Box.activeSelf);
         text_Component.text = "";
         current_Line_I = 0;
-        
     }
     
 }// end script
