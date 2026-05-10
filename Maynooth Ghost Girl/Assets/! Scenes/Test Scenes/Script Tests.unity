@@ -150,6 +150,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffb8765d4601a58a29aee1ad25e54ee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue_System
+--- !u!114 &364766855 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2040263098810039357, guid: 5070c2a4438bc1ad78cad8ad5e3a3f12, type: 3}
+  m_PrefabInstance: {fileID: 956148279694097562}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &527393635
 GameObject:
   m_ObjectHideFlags: 0
@@ -1397,6 +1408,10 @@ PrefabInstance:
       propertyPath: gg_Dialogue_Lines
       value: 
       objectReference: {fileID: 1855963324}
+    - target: {fileID: 2849254397303879948, guid: 4bd184c7942cac524b3a87b787b2fb66, type: 3}
+      propertyPath: objective_counter
+      value: 
+      objectReference: {fileID: 364766855}
     - target: {fileID: 2849254397303879948, guid: 4bd184c7942cac524b3a87b787b2fb66, type: 3}
       propertyPath: st1_Dialogue_Lines
       value: 

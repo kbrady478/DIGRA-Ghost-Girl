@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.ComponentModel;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -25,6 +26,10 @@ public class Interaction_Manager : MonoBehaviour
     [Header("Item Management - Do not change manually")] 
     public bool holding_Item;
     public GameObject held_Item;
+    
+    [Header("Objective Counter")]
+    [SerializeField] private TextMeshProUGUI objective_counter;
+    private int obj_I = 0;
     
     
     #region --- NPC Variables ---
@@ -119,7 +124,7 @@ public class Interaction_Manager : MonoBehaviour
         }
 
         // Stew cheese interaction
-        if (st2_First_Interaction == false && stew_Cheese == false)
+        if (st2_First_Interaction == false && stew_Cheese == true)
         {
             gg_Stew_Cheese_Interaction = true;
             return "gg_Stew_Cheese";
@@ -165,6 +170,7 @@ public class Interaction_Manager : MonoBehaviour
             
             if (held_Item.tag == "St1 Object")
             {
+                Increase_Counter();
                 st1_Animator.SetTrigger("Yippee_Trigger");
                 st1_Pleased = true;
                 Item_Given();
@@ -211,6 +217,7 @@ public class Interaction_Manager : MonoBehaviour
             
             if (held_Item.tag == "St2 Object")
             {
+                Increase_Counter();
                 st2_Animator.SetTrigger("Yippee_Trigger");
                 st2_Pleased = true;
                 Item_Given();
@@ -257,6 +264,7 @@ public class Interaction_Manager : MonoBehaviour
             
             if (held_Item.tag == "St3 Object")
             {
+                Increase_Counter();
                 st3_Animator.SetTrigger("Yippee_Trigger");
                 st3_Pleased = true;
                 Item_Given();
@@ -438,6 +446,12 @@ public class Interaction_Manager : MonoBehaviour
         st1_Animator.SetBool("isTalking", false);
         st2_Animator.SetBool("isTalking", false);
         st3_Animator.SetBool("isTalking", false);
+    }
+
+    private void Increase_Counter()
+    {
+        obj_I++;
+        objective_counter.text = obj_I.ToString();
     }
     
     #endregion
