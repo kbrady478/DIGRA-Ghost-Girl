@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Pause_Menu : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class Pause_Menu : MonoBehaviour
     [SerializeField] private GameObject pause_Menu;
     [SerializeField] private GameObject cursor_Objects;
     [SerializeField] private GameObject counter_Object;
+    
     
     public bool is_Paused = false;
 
@@ -48,10 +50,11 @@ public class Pause_Menu : MonoBehaviour
           cursor_Objects.SetActive(true);
           counter_Object.SetActive(true);
     }
-
+    
+    
     public void Quit_Game()
     {
-        Application.Quit();
+        SceneManager.LoadScene(0);
     }
     
 }

@@ -46956,6 +46956,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6854811184727094763, guid: 5070c2a4438bc1ad78cad8ad5e3a3f12, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1118868305}
     - target: {fileID: 8576694727026809023, guid: 5070c2a4438bc1ad78cad8ad5e3a3f12, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -47036,6 +47040,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8644442466337609202, guid: 5070c2a4438bc1ad78cad8ad5e3a3f12, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1118868305}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -47387,18 +47395,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3613314126237065708, guid: 4bd184c7942cac524b3a87b787b2fb66, type: 3}
-      propertyPath: pause_Menu
-      value: 
-      objectReference: {fileID: 1487211097}
-    - target: {fileID: 3613314126237065708, guid: 4bd184c7942cac524b3a87b787b2fb66, type: 3}
-      propertyPath: counter_Object
-      value: 
-      objectReference: {fileID: 1797999436}
-    - target: {fileID: 3613314126237065708, guid: 4bd184c7942cac524b3a87b787b2fb66, type: 3}
-      propertyPath: cursor_Objects
-      value: 
-      objectReference: {fileID: 984592216}
     - target: {fileID: 3744857328657416370, guid: 4bd184c7942cac524b3a87b787b2fb66, type: 3}
       propertyPath: pause_Menu
       value: 
