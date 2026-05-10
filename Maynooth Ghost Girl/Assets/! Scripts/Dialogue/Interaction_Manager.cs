@@ -96,9 +96,9 @@ public class Interaction_Manager : MonoBehaviour
 
     // Take input from different NPC scripts, pass onto Dialogue System
     
-    public void Start_Interaction(string[] recieved_Dialogue)
+    public void Start_Interaction(string[] recieved_Dialogue, AudioSource npc_Audio_Source)
     {
-        dialogue_System.Start_Dialogue(recieved_Dialogue);
+        dialogue_System.Start_Dialogue(recieved_Dialogue, npc_Audio_Source);
     }
     
     public void Progress_Interaction()
@@ -447,7 +447,7 @@ public class Interaction_Manager : MonoBehaviour
         st2_Animator.SetBool("isTalking", false);
         st3_Animator.SetBool("isTalking", false);
     }
-
+    
     private void Increase_Counter()
     {
         obj_I++;

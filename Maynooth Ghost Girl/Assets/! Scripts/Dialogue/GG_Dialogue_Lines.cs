@@ -6,7 +6,7 @@ public class GG_Dialogue_Lines : MonoBehaviour, IInteractable, IDialogue_Interac
     [Header("References")] 
     [SerializeField] private Interaction_Manager interaction_Manager;
     [SerializeField] private Dialogue_System dialogue_System;
-    
+    [SerializeField] private AudioSource gg_Audio;
     
     [Header("Dialogue Text - Elements are different lines")] // Different types of dialogue, arrays contain individual lines
     [SerializeField] private string[] first_Dialogue;
@@ -40,7 +40,7 @@ public class GG_Dialogue_Lines : MonoBehaviour, IInteractable, IDialogue_Interac
     {
         dialogue_To_Get = interaction_Manager.Ghost_Girl_State();
         Get_Dialogue(dialogue_To_Get);
-        interaction_Manager.Start_Interaction(dialogue_To_Send);
+        interaction_Manager.Start_Interaction(dialogue_To_Send, gg_Audio);
         interaction_Manager.in_Dialogue = true;
         interaction_Manager.StartCoroutine("GG_Facial_Interaction");
     }

@@ -17,7 +17,7 @@ public class Dialogue_System : MonoBehaviour
     [SerializeField] private GameObject dialogue_Box; // To hide/unhide whole dialogue box
     [SerializeField] private TextMeshProUGUI text_Component;
     [SerializeField] private float text_Speed;
-    //[SerializeField] private AudioSource talking_Clip;
+    [SerializeField] private AudioSource current_Audio;
     
     
     private void Start()
@@ -26,8 +26,9 @@ public class Dialogue_System : MonoBehaviour
     }
 
 
-    public void Start_Dialogue(string[] recieved_Dialogue)
+    public void Start_Dialogue(string[] recieved_Dialogue, AudioSource talking_Clip)
     {
+        current_Audio = talking_Clip;
         current_Dialogue = recieved_Dialogue;
         
         if (current_Dialogue == null)
@@ -47,7 +48,7 @@ public class Dialogue_System : MonoBehaviour
     {
         text_Component.text = "";
         
-        //talking_Clip.Play();
+        current_Audio.Play();
         currently_Typing = true;
         // Add each character in the line incrementally
         foreach (char c in current_Dialogue[current_Line_I].ToCharArray())
@@ -57,7 +58,7 @@ public class Dialogue_System : MonoBehaviour
         }
         currently_Typing = false;
         current_Line_I++;
-        //talking_Clip.Pause();
+        current_Audio.Pause();
         
     }
 
@@ -69,7 +70,7 @@ public class Dialogue_System : MonoBehaviour
         if (currently_Typing == true)
         {
             StopAllCoroutines();
-            //talking_Clip.Pause();
+            current_Audio.Pause();
             text_Component.text = current_Dialogue[current_Line_I];
             currently_Typing = false;
             current_Line_I++;
