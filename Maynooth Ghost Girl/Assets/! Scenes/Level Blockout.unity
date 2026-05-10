@@ -32450,6 +32450,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 575580628}
     m_Modifications:
+    - target: {fileID: 871520035202987256, guid: e7b9ea19fe476c54face6d628dc7d191, type: 3}
+      propertyPath: m_Name
+      value: poste_obj7
+      objectReference: {fileID: 0}
     - target: {fileID: 4956073979021356497, guid: e7b9ea19fe476c54face6d628dc7d191, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.8239064
@@ -32501,10 +32505,6 @@ PrefabInstance:
     - target: {fileID: 4956073979021356497, guid: e7b9ea19fe476c54face6d628dc7d191, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 871520035202987256, guid: e7b9ea19fe476c54face6d628dc7d191, type: 3}
-      propertyPath: m_Name
-      value: poste_obj7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -37646,6 +37646,54 @@ PrefabInstance:
       propertyPath: interaction_Manager
       value: 
       objectReference: {fileID: 1461333701}
+    - target: {fileID: 9131384587796470670, guid: ecae361f1f2c24f52883852105b7fb3b, type: 3}
+      propertyPath: correct_Item.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9131384587796470670, guid: ecae361f1f2c24f52883852105b7fb3b, type: 3}
+      propertyPath: 'wrong_Item.Array.data[0]'
+      value: This doesn't look right
+      objectReference: {fileID: 0}
+    - target: {fileID: 9131384587796470670, guid: ecae361f1f2c24f52883852105b7fb3b, type: 3}
+      propertyPath: first_Dialogue.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9131384587796470670, guid: ecae361f1f2c24f52883852105b7fb3b, type: 3}
+      propertyPath: 'correct_Item.Array.data[0]'
+      value: No way you found it!
+      objectReference: {fileID: 0}
+    - target: {fileID: 9131384587796470670, guid: ecae361f1f2c24f52883852105b7fb3b, type: 3}
+      propertyPath: 'correct_Item.Array.data[1]'
+      value: Thanks so much.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9131384587796470670, guid: ecae361f1f2c24f52883852105b7fb3b, type: 3}
+      propertyPath: 'first_Dialogue.Array.data[0]'
+      value: Howdy I'm Stree
+      objectReference: {fileID: 0}
+    - target: {fileID: 9131384587796470670, guid: ecae361f1f2c24f52883852105b7fb3b, type: 3}
+      propertyPath: 'first_Dialogue.Array.data[1]'
+      value: I misplaced something..
+      objectReference: {fileID: 0}
+    - target: {fileID: 9131384587796470670, guid: ecae361f1f2c24f52883852105b7fb3b, type: 3}
+      propertyPath: 'first_Dialogue.Array.data[2]'
+      value: Any chance you could gimmie a hand?
+      objectReference: {fileID: 0}
+    - target: {fileID: 9131384587796470670, guid: ecae361f1f2c24f52883852105b7fb3b, type: 3}
+      propertyPath: 'pleased_Item_Held.Array.data[0]'
+      value: I'm so glad to have it back.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9131384587796470670, guid: ecae361f1f2c24f52883852105b7fb3b, type: 3}
+      propertyPath: 'normal_Reinteract_Dialogue.Array.data[0]'
+      value: Hey.. I'm still waiting here
+      objectReference: {fileID: 0}
+    - target: {fileID: 9131384587796470670, guid: ecae361f1f2c24f52883852105b7fb3b, type: 3}
+      propertyPath: 'normal_Reinteract_Dialogue.Array.data[1]'
+      value: Can you take another look?
+      objectReference: {fileID: 0}
+    - target: {fileID: 9131384587796470670, guid: ecae361f1f2c24f52883852105b7fb3b, type: 3}
+      propertyPath: 'pleased_Reinteract_Dialogue.Array.data[0]'
+      value: Lets go!
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -37667,6 +37715,30 @@ PrefabInstance:
       propertyPath: interaction_Manager
       value: 
       objectReference: {fileID: 1461333701}
+    - target: {fileID: 778264276671767484, guid: 0e5d5b77d05de284994861366ca33e2f, type: 3}
+      propertyPath: 'wrong_Item.Array.data[0]'
+      value: I dont think thats mine..
+      objectReference: {fileID: 0}
+    - target: {fileID: 778264276671767484, guid: 0e5d5b77d05de284994861366ca33e2f, type: 3}
+      propertyPath: first_Dialogue.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 778264276671767484, guid: 0e5d5b77d05de284994861366ca33e2f, type: 3}
+      propertyPath: 'first_Dialogue.Array.data[0]'
+      value: Hello! I'm Stone
+      objectReference: {fileID: 0}
+    - target: {fileID: 778264276671767484, guid: 0e5d5b77d05de284994861366ca33e2f, type: 3}
+      propertyPath: 'first_Dialogue.Array.data[1]'
+      value: Can you help me?
+      objectReference: {fileID: 0}
+    - target: {fileID: 778264276671767484, guid: 0e5d5b77d05de284994861366ca33e2f, type: 3}
+      propertyPath: 'first_Dialogue.Array.data[2]'
+      value: I lost something important
+      objectReference: {fileID: 0}
+    - target: {fileID: 778264276671767484, guid: 0e5d5b77d05de284994861366ca33e2f, type: 3}
+      propertyPath: 'pleased_Item_Held.Array.data[0]'
+      value: My hands are full!
+      objectReference: {fileID: 0}
     - target: {fileID: 4953609427525698191, guid: 0e5d5b77d05de284994861366ca33e2f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.21
@@ -37931,6 +38003,54 @@ PrefabInstance:
       propertyPath: interaction_Manager
       value: 
       objectReference: {fileID: 1461333701}
+    - target: {fileID: 9175513822723201782, guid: 2cedd10a94ed5ef0d987562bfa4cca90, type: 3}
+      propertyPath: 'given_Item.Array.data[0]'
+      value: I cant hold this..
+      objectReference: {fileID: 0}
+    - target: {fileID: 9175513822723201782, guid: 2cedd10a94ed5ef0d987562bfa4cca90, type: 3}
+      propertyPath: first_Dialogue.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9175513822723201782, guid: 2cedd10a94ed5ef0d987562bfa4cca90, type: 3}
+      propertyPath: 'end_Dialogue.Array.data[0]'
+      value: Thank you for helping me!
+      objectReference: {fileID: 0}
+    - target: {fileID: 9175513822723201782, guid: 2cedd10a94ed5ef0d987562bfa4cca90, type: 3}
+      propertyPath: 'first_Dialogue.Array.data[0]'
+      value: Hello there..
+      objectReference: {fileID: 0}
+    - target: {fileID: 9175513822723201782, guid: 2cedd10a94ed5ef0d987562bfa4cca90, type: 3}
+      propertyPath: 'first_Dialogue.Array.data[1]'
+      value: I'm a ghost.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9175513822723201782, guid: 2cedd10a94ed5ef0d987562bfa4cca90, type: 3}
+      propertyPath: 'first_Dialogue.Array.data[2]'
+      value: Everyone's scared of me.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9175513822723201782, guid: 2cedd10a94ed5ef0d987562bfa4cca90, type: 3}
+      propertyPath: 'first_Dialogue.Array.data[3]'
+      value: Can you help the students?
+      objectReference: {fileID: 0}
+    - target: {fileID: 9175513822723201782, guid: 2cedd10a94ed5ef0d987562bfa4cca90, type: 3}
+      propertyPath: 'first_Dialogue.Array.data[4]'
+      value: 'I '
+      objectReference: {fileID: 0}
+    - target: {fileID: 9175513822723201782, guid: 2cedd10a94ed5ef0d987562bfa4cca90, type: 3}
+      propertyPath: 'reinteract_Dialogue.Array.data[0]'
+      value: The students are still scared.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9175513822723201782, guid: 2cedd10a94ed5ef0d987562bfa4cca90, type: 3}
+      propertyPath: 'reinteract_Dialogue.Array.data[1]'
+      value: Can you help them?
+      objectReference: {fileID: 0}
+    - target: {fileID: 9175513822723201782, guid: 2cedd10a94ed5ef0d987562bfa4cca90, type: 3}
+      propertyPath: 'stew_Cheese_Interaction.Array.data[0]'
+      value: I think stew wants cheese?
+      objectReference: {fileID: 0}
+    - target: {fileID: 9175513822723201782, guid: 2cedd10a94ed5ef0d987562bfa4cca90, type: 3}
+      propertyPath: 'stew_Cheese_Interaction.Array.data[1]'
+      value: Lets get that cheese!
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -37996,6 +38116,10 @@ PrefabInstance:
       propertyPath: interaction_Manager
       value: 
       objectReference: {fileID: 1461333701}
+    - target: {fileID: 3450196841581608418, guid: 29870e55c034c1549bc88aaa7a0c602b, type: 3}
+      propertyPath: 'first_Dialogue.Array.data[0]'
+      value: Hey there I'm stew.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
