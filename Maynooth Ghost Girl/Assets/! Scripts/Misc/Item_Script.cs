@@ -11,7 +11,7 @@ public class Item_Script : MonoBehaviour, IInteractable
     private bool can_Interact = true;
     private bool in_Dialogue = false;
     private float interact_Cooldown = 0.05f;
-    //private AudioSource audio_Source;
+    private AudioSource audio_Source;
     
     void Start()
     {
@@ -20,7 +20,7 @@ public class Item_Script : MonoBehaviour, IInteractable
         collider = GetComponent<Collider>();
         target_Position = GameObject.FindGameObjectWithTag("Hold Point");
         being_Held = false;
-        //audio_Source = GameObject.FindGameObjectWithTag("Pick_Up_Audio").GetComponent<AudioSource>();
+        audio_Source = this.GetComponent<AudioSource>();
     }// end Start()
 
     void FixedUpdate()
@@ -40,6 +40,7 @@ public class Item_Script : MonoBehaviour, IInteractable
             // Stops problem of picking item back up as soon as it is dropped
             can_Interact = false;
             Invoke("Reset_Interact", interact_Cooldown);
+            
             
             being_Held = false;
             rb.isKinematic = false;
@@ -64,7 +65,7 @@ public class Item_Script : MonoBehaviour, IInteractable
         // Pick Up
         if (being_Held == false)
         {
-            //audio_Source.Play();
+            audio_Source.Play();
             being_Held = true;
             rb.isKinematic = true;
             collider.enabled = false; // Turn off collider to avoid weird physics with player
