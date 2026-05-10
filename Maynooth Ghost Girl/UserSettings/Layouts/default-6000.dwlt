@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1349
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Project
   m_RootView: {fileID: 4}
   m_MinSize: {x: 875, y: 338}
   m_MaxSize: {x: 10000, y: 10000}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 56}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 731
+  controlID: 64
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 112}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 18
+  controlID: 62
   draggingID: 0
 --- !u!114 &8
 MonoBehaviour:
@@ -197,7 +197,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 112}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 19
+  controlID: 63
   draggingID: 0
 --- !u!114 &9
 MonoBehaviour:
@@ -1656,7 +1656,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/! Prefabs/Envi _assetsd
+    - Assets/Art/UI Sprite
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1666,7 +1666,7 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 67
   m_LastFolders:
-  - Assets/! Prefabs/Envi _assetsd
+  - Assets/Art/UI Sprite
   m_LastFoldersGridSize: 67
   m_LastProjectPath: D:\Big D documents\3rd Year\Asset Design\Digra\DIGRA unity folders\DIGRA-Ghost-Girl\Maynooth
     Ghost Girl
@@ -1676,9 +1676,9 @@ MonoBehaviour:
   m_FolderTreeState:
     scrollPos: {x: 0, y: 42}
     m_SelectedIDs:
-    - m_Data: 54416
+    - m_Data: 54984
     m_LastClickedID:
-      m_Data: 54416
+      m_Data: 54984
     m_ExpandedIDs:
     - m_Data: 0
     - m_Data: 54768
@@ -1751,9 +1751,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs:
-    - m_Data: 61968
-    m_LastClickedInstanceID: 61968
+    m_SelectedInstanceIDs: []
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs:
     - m_Data: 48250
@@ -1784,7 +1783,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 2}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 67
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
@@ -1871,30 +1870,7 @@ MonoBehaviour:
       m_LastClickedID:
         m_Data: 0
       m_ExpandedIDs:
-      - m_Data: -87878
-      - m_Data: -75028
-      - m_Data: -16506
-      - m_Data: -8010
-      - m_Data: -1618
-      - m_Data: 47564
-      - m_Data: 47632
-      - m_Data: 47940
-      - m_Data: 47968
-      - m_Data: 48060
-      - m_Data: 48368
-      - m_Data: 48772
-      - m_Data: 48796
-      - m_Data: 48958
-      - m_Data: 49120
-      - m_Data: 49744
-      - m_Data: 61024
-      - m_Data: 61098
-      - m_Data: 61596
-      - m_Data: 62102
-      - m_Data: 62430
-      - m_Data: 62802
-      - m_Data: 62980
-      - m_Data: 63458
+      - m_Data: -1338
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
