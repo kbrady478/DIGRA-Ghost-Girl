@@ -43,6 +43,7 @@ public class St1_Dialogue_Lines : MonoBehaviour, IInteractable, IDialogue_Intera
         Get_Dialogue(dialogue_To_Get);
         interaction_Manager.Start_Interaction(dialogue_To_Send);
         interaction_Manager.in_Dialogue = true;
+        interaction_Manager.StartCoroutine("St1_Facial_Interaction");
     }
 
     // Used to continue interaction through manager on repeat interact presses

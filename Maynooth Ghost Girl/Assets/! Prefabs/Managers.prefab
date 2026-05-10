@@ -97,7 +97,7 @@ MonoBehaviour:
   fade_Animation: {fileID: 0}
   holding_Item: 0
   held_Item: {fileID: 0}
-  face_Anim_Timer: 0.7
+  face_Anim_Timer: 0.4
   gg_Dialogue_Lines: {fileID: 0}
   gg_Animator: {fileID: 0}
   gg_First_Interaction: 1
@@ -106,19 +106,34 @@ MonoBehaviour:
   gg_Default_Face: {fileID: 2800000, guid: 59b6589fd91e8e047a3c5675b99a18e3, type: 3}
   gg_Talking_Textures:
   - {fileID: 2800000, guid: f8d61c9cc8e2d6740bd85c7d532833c5, type: 3}
-  - {fileID: 2800000, guid: 959555b2f5e33f340a79d8aa07530b37, type: 3}
+  - {fileID: 2800000, guid: 66697a598ce76184d9f61a32c20595b2, type: 3}
   st1_Dialogue_Lines: {fileID: 0}
   st1_Animator: {fileID: 0}
   st1_Pleased: 0
   st1_First_Interaction: 1
+  st1_Face_Mat: {fileID: 0}
+  st1_Default_Face: {fileID: 2800000, guid: 875105843054e5d40acebe6ce6399d60, type: 3}
+  st1_Talking_Textures:
+  - {fileID: 2800000, guid: 982668de2d20509478e6b318535555f9, type: 3}
+  - {fileID: 2800000, guid: ad7c8c2006cb29c429eacf43113225bc, type: 3}
   st2_Dialogue_Lines: {fileID: 0}
   st2_Animator: {fileID: 0}
   st2_Pleased: 0
   st2_First_Interaction: 1
+  st2_Face_Mat: {fileID: 0}
+  st2_Default_Face: {fileID: 2800000, guid: fc1de19e4f8ca034b88eaaf2d2b3f253, type: 3}
+  st2_Talking_Textures:
+  - {fileID: 2800000, guid: 17e9beaeb709d1f469ee13a60f68f80e, type: 3}
+  - {fileID: 2800000, guid: 219ad97fbd095c44093d1c8adf70bb98, type: 3}
   st3_Dialogue_Lines: {fileID: 0}
   st3_Animator: {fileID: 0}
   st3_Pleased: 0
   st3_First_Interaction: 1
+  st3_Face_Mat: {fileID: 0}
+  st3_Default_Face: {fileID: 2800000, guid: 451824b54b48fb6489c87c6528d08337, type: 3}
+  st3_Talking_Textures:
+  - {fileID: 2800000, guid: 691ab1a6a04ff8a43be4d85d33012522, type: 3}
+  - {fileID: 2800000, guid: 1d51a4a4d2a0e7e40a306306fcd8d99a, type: 3}
 --- !u!1 &8143226769461223555
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,6 +223,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2834586165779215996}
   - component: {fileID: 3744857328657416370}
+  - component: {fileID: 3613314126237065708}
   m_Layer: 0
   m_Name: UI Manager
   m_TagString: Untagged
@@ -231,6 +247,22 @@ Transform:
   m_Father: {fileID: 3609479668254109336}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3744857328657416370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8626144881835763416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d9298eb4abf2d14bae96e4ae2f5f84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Pause_Menu
+  pause_Menu: {fileID: 0}
+  cursor_Objects: {fileID: 0}
+  counter_Object: {fileID: 0}
+  is_Paused: 0
+--- !u!114 &3613314126237065708
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
