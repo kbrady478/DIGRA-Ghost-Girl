@@ -42,6 +42,7 @@ public class GG_Dialogue_Lines : MonoBehaviour, IInteractable, IDialogue_Interac
         Get_Dialogue(dialogue_To_Get);
         interaction_Manager.Start_Interaction(dialogue_To_Send);
         interaction_Manager.in_Dialogue = true;
+        interaction_Manager.StartCoroutine("GG_Facial_Interaction");
     }
 
     // Used to continue interaction through manager on repeat interact presses

@@ -56,6 +56,11 @@ public class Interaction_Manager : MonoBehaviour
     public bool st1_Pleased = false;
     public bool st1_First_Interaction = true;
     
+    [Space(5)]
+    [SerializeField] private Renderer st1_Face_Mat;
+    [SerializeField] private Texture st1_Default_Face;
+    [SerializeField] private Texture[] st1_Talking_Textures;
+    
     
     [Header("- Student 2 -")]
     [SerializeField] private St2_Dialogue_Lines st2_Dialogue_Lines;
@@ -63,12 +68,21 @@ public class Interaction_Manager : MonoBehaviour
     public bool st2_Pleased = false;
     public bool st2_First_Interaction = true;
     
+    [Space(5)]
+    [SerializeField] private Renderer st2_Face_Mat;
+    [SerializeField] private Texture st2_Default_Face;
+    [SerializeField] private Texture[] st2_Talking_Textures;
     
     [Header("- Student 3 -")]
     [SerializeField] private St3_Dialogue_Lines st3_Dialogue_Lines;
     [SerializeField] private Animator st3_Animator;
     public bool st3_Pleased = false;
     public bool st3_First_Interaction = true;
+    
+    [Space(5)]
+    [SerializeField] private Renderer st3_Face_Mat;
+    [SerializeField] private Texture st3_Default_Face;
+    [SerializeField] private Texture[] st3_Talking_Textures;
     
     #endregion
     
@@ -97,8 +111,6 @@ public class Interaction_Manager : MonoBehaviour
     public string Ghost_Girl_State()
     {
         gg_Animator.SetBool("isTalking", true);
-        StartCoroutine(GG_Facial_Interaction());
-        
         
         if (gg_First_Interaction == true)
         {
@@ -272,13 +284,18 @@ public class Interaction_Manager : MonoBehaviour
     #endregion
 
 
-    private IEnumerator GG_Facial_Interaction()
+    #region --- Facial Animations ---
+    
+    public IEnumerator GG_Facial_Interaction()
     {
+        Material face_Mat = gg_Face_Mat.materials[1];
         int i = 0;
         
         while (in_Dialogue == true)
         {
-            gg_Face_Mat.material.mainTexture = gg_Talking_Textures[i];
+
+            face_Mat.SetTexture("_BaseMap", gg_Talking_Textures[i]);
+            
             i++;
 
             if (i > gg_Talking_Textures.Length - 1)
@@ -292,9 +309,104 @@ public class Interaction_Manager : MonoBehaviour
 
     private void GG_Face_Reset()
     {
-        gg_Face_Mat.material.mainTexture = gg_Default_Face;
+        Material face_Mat = gg_Face_Mat.materials[1];
+        face_Mat.SetTexture("_BaseMap", gg_Default_Face);
+        gg_Face_Mat.materials[1] = face_Mat;
     }
 
+    
+    public IEnumerator St1_Facial_Interaction()
+    {
+        Material face_Mat = st1_Face_Mat.materials[1];
+        int i = 0;
+        
+        while (in_Dialogue == true)
+        {
+            
+
+            face_Mat.SetTexture("_BaseMap", st1_Talking_Textures[i]);
+            
+            i++;
+
+            if (i > st1_Talking_Textures.Length - 1)
+                i = 0;
+
+            yield return new WaitForSeconds(face_Anim_Timer);
+        }
+        
+        St1_Face_Reset();
+    }
+
+    private void St1_Face_Reset()
+    {
+        Material face_Mat = st1_Face_Mat.materials[1];
+        face_Mat.SetTexture("_BaseMap", st1_Default_Face);
+        st1_Face_Mat.materials[1] = face_Mat;
+    }
+    
+    
+    public IEnumerator St2_Facial_Interaction()
+    {
+        Material face_Mat = st2_Face_Mat.materials[2];
+        int i = 0;
+        
+        while (in_Dialogue == true)
+        {
+            
+
+            face_Mat.SetTexture("_BaseMap", st2_Talking_Textures[i]);
+            
+            i++;
+
+            if (i > st2_Talking_Textures.Length - 1)
+                i = 0;
+
+            yield return new WaitForSeconds(face_Anim_Timer);
+        }
+        
+        St2_Face_Reset();
+    }
+
+    private void St2_Face_Reset()
+    {
+        Material face_Mat = st2_Face_Mat.materials[2];
+        face_Mat.SetTexture("_BaseMap", st2_Default_Face);
+        st2_Face_Mat.materials[1] = face_Mat;
+    }
+    
+    
+    public IEnumerator St3_Facial_Interaction()
+    {
+        Material face_Mat = st3_Face_Mat.materials[1];
+        int i = 0;
+        
+        while (in_Dialogue == true)
+        {
+            
+
+            face_Mat.SetTexture("_BaseMap", st3_Talking_Textures[i]);
+            
+            i++;
+
+            if (i > st3_Talking_Textures.Length - 1)
+                i = 0;
+
+            yield return new WaitForSeconds(face_Anim_Timer);
+        }
+        
+        St3_Face_Reset();
+    }
+
+    private void St3_Face_Reset()
+    {
+        Material face_Mat = st3_Face_Mat.materials[1];
+        face_Mat.SetTexture("_BaseMap", st3_Default_Face);
+        st3_Face_Mat.materials[1] = face_Mat;
+    }
+    
+    #endregion
+    
+    
     #region --- Other ---
     
     private void Item_Given()
