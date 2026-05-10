@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 52374ffc70720d143b3429642ff911c7
+guid: 902d9af3697d40d44b00f0e0fc913040
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Plant_mtl
-    second: {fileID: 2100000, guid: 34d79c64c4ec13b4ead31d2594a3c2d1, type: 2}
+      name: Shelf_mtl
+    second: {fileID: 2100000, guid: 5a6b7162f723bea47a30d9cfe280052e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

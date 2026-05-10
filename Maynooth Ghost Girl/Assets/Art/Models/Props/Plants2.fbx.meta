@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d81e4b9e6549c784b8ac4bf755b49557
+guid: e871683a89b304b499ef745c2eb8d30b
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Shelf_mtl
-    second: {fileID: 2100000, guid: db3a3ead2513f044f8749a626378d95f, type: 2}
+      name: Plant_mtl
+    second: {fileID: 2100000, guid: 34d79c64c4ec13b4ead31d2594a3c2d1, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -38,7 +38,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 50
+    globalScale: 28
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -96,7 +96,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 50
+    globalScale: 28
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
