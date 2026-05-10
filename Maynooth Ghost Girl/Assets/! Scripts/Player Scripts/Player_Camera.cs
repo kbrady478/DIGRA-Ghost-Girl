@@ -4,6 +4,8 @@ using UnityEngine;
 public class Player_Camera : MonoBehaviour
 {
     private Interaction_Manager interaction_Manager;
+    [SerializeField] private Pause_Menu pause_Menu;
+    
     
     [Header("Camera Settings")]
     public float sensitivity = 5F;
@@ -21,7 +23,7 @@ public class Player_Camera : MonoBehaviour
     
     private void Update()
     {
-        if (interaction_Manager.in_Dialogue == true)
+        if (interaction_Manager.in_Dialogue == true || pause_Menu.is_Paused == true)
             return;
         
         // Get directions
