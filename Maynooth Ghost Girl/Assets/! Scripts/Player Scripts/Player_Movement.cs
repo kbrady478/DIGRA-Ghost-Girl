@@ -12,7 +12,7 @@ public class Player_Movement : MonoBehaviour
     [Header("Settigns")] 
     [SerializeField] private float move_Speed = 5f;
     [SerializeField] private float jump_Force = 5f;
-    [SerializeField] private float gravity = 10f;
+    [SerializeField] private float gravity = -10f;
     
     private Vector3 velocity = Vector3.zero;
     
