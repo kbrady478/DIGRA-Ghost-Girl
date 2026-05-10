@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1704382825011708416, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6019411310329839121, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.0185499
@@ -55,6 +59,10 @@ PrefabInstance:
     - target: {fileID: 8277734762357318183, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
       propertyPath: m_Name
       value: Student 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8277734762357318183, guid: ab5d09c1a5bec741eb0143cf8e06b357, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -97,15 +97,26 @@ MonoBehaviour:
   fade_Animation: {fileID: 0}
   holding_Item: 0
   held_Item: {fileID: 0}
+  face_Anim_Timer: 0.7
   gg_Dialogue_Lines: {fileID: 0}
+  gg_Animator: {fileID: 0}
   gg_First_Interaction: 1
+  stew_Cheese: {fileID: 0}
+  gg_Face_Mat: {fileID: 0}
+  gg_Default_Face: {fileID: 2800000, guid: 59b6589fd91e8e047a3c5675b99a18e3, type: 3}
+  gg_Talking_Textures:
+  - {fileID: 2800000, guid: f8d61c9cc8e2d6740bd85c7d532833c5, type: 3}
+  - {fileID: 2800000, guid: 959555b2f5e33f340a79d8aa07530b37, type: 3}
   st1_Dialogue_Lines: {fileID: 0}
+  st1_Animator: {fileID: 0}
   st1_Pleased: 0
   st1_First_Interaction: 1
   st2_Dialogue_Lines: {fileID: 0}
+  st2_Animator: {fileID: 0}
   st2_Pleased: 0
   st2_First_Interaction: 1
   st3_Dialogue_Lines: {fileID: 0}
+  st3_Animator: {fileID: 0}
   st3_Pleased: 0
   st3_First_Interaction: 1
 --- !u!1 &8143226769461223555
