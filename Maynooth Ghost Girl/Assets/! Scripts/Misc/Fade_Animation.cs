@@ -13,7 +13,7 @@ public class Fade_Animation : MonoBehaviour
 
     public void Load_Menu()
     {
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene(0);
     }
     
 
