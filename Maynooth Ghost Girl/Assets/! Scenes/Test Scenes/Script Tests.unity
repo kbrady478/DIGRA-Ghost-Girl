@@ -129,6 +129,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1065932359659484231, guid: 5070c2a4438bc1ad78cad8ad5e3a3f12, type: 3}
   m_PrefabInstance: {fileID: 956148279694097562}
   m_PrefabAsset: {fileID: 0}
+--- !u!137 &278407380 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 4726993957363368597, guid: 2cedd10a94ed5ef0d987562bfa4cca90, type: 3}
+  m_PrefabInstance: {fileID: 5347315368349307605}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &307225884 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3454296232354128522, guid: 4bd184c7942cac524b3a87b787b2fb66, type: 3}
@@ -1183,9 +1188,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2849254397303879948, guid: 4bd184c7942cac524b3a87b787b2fb66, type: 3}
+      propertyPath: gg_Face_Mat
+      value: 
+      objectReference: {fileID: 278407380}
+    - target: {fileID: 2849254397303879948, guid: 4bd184c7942cac524b3a87b787b2fb66, type: 3}
       propertyPath: fade_Animation
       value: 
       objectReference: {fileID: 550631386}
+    - target: {fileID: 2849254397303879948, guid: 4bd184c7942cac524b3a87b787b2fb66, type: 3}
+      propertyPath: face_Anim_Timer
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2849254397303879948, guid: 4bd184c7942cac524b3a87b787b2fb66, type: 3}
+      propertyPath: gg_Default_Face
+      value: 
+      objectReference: {fileID: 2800000, guid: 59b6589fd91e8e047a3c5675b99a18e3, type: 3}
     - target: {fileID: 2849254397303879948, guid: 4bd184c7942cac524b3a87b787b2fb66, type: 3}
       propertyPath: gg_Dialogue_Lines
       value: 
@@ -1202,6 +1219,30 @@ PrefabInstance:
       propertyPath: st3_Dialogue_Lines
       value: 
       objectReference: {fileID: 954640692}
+    - target: {fileID: 2849254397303879948, guid: 4bd184c7942cac524b3a87b787b2fb66, type: 3}
+      propertyPath: gg_Face_Textures.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2849254397303879948, guid: 4bd184c7942cac524b3a87b787b2fb66, type: 3}
+      propertyPath: 'gg_Face_Textures.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2800000, guid: f8d61c9cc8e2d6740bd85c7d532833c5, type: 3}
+    - target: {fileID: 2849254397303879948, guid: 4bd184c7942cac524b3a87b787b2fb66, type: 3}
+      propertyPath: 'gg_Face_Textures.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2800000, guid: 66697a598ce76184d9f61a32c20595b2, type: 3}
+    - target: {fileID: 2849254397303879948, guid: 4bd184c7942cac524b3a87b787b2fb66, type: 3}
+      propertyPath: gg_Talking_Textures.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2849254397303879948, guid: 4bd184c7942cac524b3a87b787b2fb66, type: 3}
+      propertyPath: 'gg_Talking_Textures.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2800000, guid: f8d61c9cc8e2d6740bd85c7d532833c5, type: 3}
+    - target: {fileID: 2849254397303879948, guid: 4bd184c7942cac524b3a87b787b2fb66, type: 3}
+      propertyPath: 'gg_Talking_Textures.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2800000, guid: 66697a598ce76184d9f61a32c20595b2, type: 3}
     - target: {fileID: 3454296232354128522, guid: 4bd184c7942cac524b3a87b787b2fb66, type: 3}
       propertyPath: dialogue_Box
       value: 

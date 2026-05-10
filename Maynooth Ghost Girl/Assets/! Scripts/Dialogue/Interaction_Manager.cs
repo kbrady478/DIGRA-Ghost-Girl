@@ -3,6 +3,7 @@ using System.Collections;
 using System.ComponentModel;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 interface IDialogue_Interaction
@@ -29,12 +30,19 @@ public class Interaction_Manager : MonoBehaviour
     #region --- NPC Variables ---
     
     // True means it has to be played, false is either not played or has played
-    [Header("-- NPC Dialogue and Triggers --")]
+    [Header("-- NPC Stuff --")] 
+    [SerializeField] private float face_Anim_Timer;
+    
     
     [Header("Ghost Girl")] 
     [SerializeField] private GG_Dialogue_Lines gg_Dialogue_Lines;
     public bool gg_First_Interaction = true;
     private bool gg_Final_Interaction = false;
+
+    [SerializeField] private Renderer gg_Face_Mat;
+    [SerializeField] private Texture gg_Default_Face;
+    [SerializeField] private Texture[] gg_Talking_Textures;
+    
     
     [Header("Student 1")]
     [SerializeField] private St1_Dialogue_Lines st1_Dialogue_Lines;
@@ -78,6 +86,8 @@ public class Interaction_Manager : MonoBehaviour
     
     public string Ghost_Girl_State()
     {
+        StartCoroutine(GG_Facial_Interaction());
+        
         if (gg_First_Interaction == true)
         {
             gg_First_Interaction = false;
@@ -232,6 +242,29 @@ public class Interaction_Manager : MonoBehaviour
     
     #endregion
 
+
+    private IEnumerator GG_Facial_Interaction()
+    {
+        int i = 0;
+        
+        while (in_Dialogue == true)
+        {
+            gg_Face_Mat.material.mainTexture = gg_Talking_Textures[i];
+            i++;
+
+            if (i > gg_Talking_Textures.Length - 1)
+                i = 0;
+
+            yield return new WaitForSeconds(face_Anim_Timer);
+        }
+        
+        GG_Face_Reset();
+    }
+
+    private void GG_Face_Reset()
+    {
+        gg_Face_Mat.material.mainTexture = gg_Default_Face;
+    }
 
     #region --- Other ---
     

@@ -96,7 +96,6 @@ public class Dialogue_System : MonoBehaviour
         dialogue_Box.SetActive(!dialogue_Box.activeSelf);
         text_Component.text = "";
         current_Line_I = 0;
-        
     }
     
 }// end script
